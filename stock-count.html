@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" name="store_name" placeholder="Store Name" class="store-name">
+
+        <div class="state_lga">
+            <p>State</p>
+            <div class="dropdown-div">
+                <div class="custom-select">
+                    <div class="custom-select__trigger">
+                        <span class="custom-arrow"></span>
+                        <span class="show">Lagos</span>
+                    </div>
+                    <div id="stateDropdown" class="custom-options">
+                        <span class="custom-option selected" data-value="lagos">Lagos</span>
+                        <span class="custom-option" data-value="ogun">Ogun</span>
+                        <span class="custom-option" data-value="abuja">Abuja</span>
+                        <span class="custom-option" data-value="osun">Osun</span>
+                    </div>  
+                </div>
+                
+            </div>
+        </div>
+        <div class="state_lga">
+            <p>Local Government Area</p>
+            <div class="dropdown-div">
+                <div class="custom-select">
+                    <div class="custom-select__trigger">
+                        <span class="custom-arrow"></span>
+                        <span class="show">Oshodi/Isolo</span>
+                    </div>
+                    <div id="stateDropdown" class="custom-options">
+                        <span class="custom-option lgaOption selected" data-value="Oshodi">Oshodi/Isolo</span>
+                        <span class="custom-option lgaOption" data-value="ikorodu">Ikorodu</span>
+                        <span class="custom-option lgaOption" data-value="l_island">Lagos island</span>
+                        <span class="custom-option lgaOption" data-value="l_mainland">Lagos mainland</span>
+                        <span class="custom-option lgaOption" data-value="ajah">Ajah</span>
+                        <span class="custom-option lgaOption" data-value="lekki">Lekki</span>
+                        <span class="custom-option lgaOption" data-value="festac">Festac</span>
+                    </div>  
+                </div>
+                
+            </div>
+        </div>
+        <div class="buttonDiv">
+            <button class="surveyCalc">Calculate</button>
+        </div>
+        <hr>
+        <h3 class="survey_cost">Survey Cost: <span>Ikeja store</span></h3>
+        
+        <div class="cost_bar" id="costBar">
+            <span>₦</span>
+            <span id="surveyCost"></span>
+        </div>
+
+        <hr class="tAndChr">
+        <div class="tAndC">
+            <span><input type="checkbox">  Accept our terms on stock-taking. Read more about our stock-taking policy <a href="#"> <i>here</i></a></span>
+            <button>Make Payment</button>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+</body>
+
+</html>
