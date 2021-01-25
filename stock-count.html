@@ -12,7 +12,25 @@
 
 <body>
     <div class="container">
-        <input type="text" name="store_name" placeholder="Store Name" class="store-name">
+        <div class="containerHeader">
+            <h2>Step 1: Stocktaking Calculator</h2>
+            <hr class="tAndChr">
+            We have a simple and cost-friendly pricing model, and
+            the best way to know where your store(s) fits in the
+            pricing model is to first count the total number of
+            unique products (SKUs) in your store. It's the first
+            step to ensuring your business starts right on the
+            ShopKite Merchant platform.
+            
+            You can request for a survey to be made on your store by reaching us on our support line and we'll have one of our
+            representatives sent to you. Please fill the form below this section to get a Survey cost.
+            SKU count:
+            An SKU count refers to the number of unique
+            products you have in your store and not the
+            volume. See the diagram for further clarity:
+        </div>
+        <div class="surveyContainer">
+        <input type="text" name="store_name" placeholder="Store Name" class="store-name" id="store_0">
 
         <div class="state_lga">
             <p>State</p>
@@ -54,13 +72,23 @@
             </div>
         </div>
         <div class="buttonDiv">
-            <button class="surveyCalc">Calculate</button>
+            <div class="calcDiv">
+                <button class="surveyCalc">Calculate</button>
+                <span>...</span>
+            </div>
+        </div>
+        </div>
+        <hr class="target_hr"> 
+        
+        <div class="store-name-div">
+            <input type="text" name="store_name" placeholder="Store Name" class="store-name newStoreName">
+            <button class="newStockStore surveyStore">Add an additional store</button>
         </div>
         <hr>
-        <h3 class="survey_cost">Survey Cost: <span>Ikeja store</span></h3>
+        <h3 class="cost_title">Survey Cost: </h3>
         
         <div class="cost_bar" id="costBar">
-            <span>₦</span>
+            <p class="costBarTitle">Total survey cost:</p>
             <span id="surveyCost"></span>
         </div>
 

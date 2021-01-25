@@ -25,7 +25,7 @@ hr {
 a {
     color: #FF6600;
 }
-h3 {
+h2, h3 {
     color: #FF6600;
     font-weight: 500;
 }
@@ -47,16 +47,35 @@ button {
 button:focus {
     outline: none;
 }
+
+.containerHeader{
+    margin-top: 10px;
+    padding: 10px 0;
+    color: #808080;
+}
+
 .buttonDiv {
-    width: 100%;
-    position: relative;
-    padding: 28px;
+    display: flex;
+    justify-content: flex-end;
 }
-.buttonDiv button {
-    position: absolute;
-    right: 0;
-    bottom: 10px;
+.calcDiv {
+    width: 20rem;
+    padding: 0 69px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+.calcDiv span {
+    font-size: 1.7em;
+    color: #FF6600;   
+}
+.calcDiv p {
+    color: #FF6600;   
+}
+.stockDay {
+    font-size: 1.2em;
+}
+
 .container {
     padding:0 230px;;
     margin: auto;
@@ -160,7 +179,8 @@ button:focus {
     background-color: #9c9c9c;
 }
 .cost_bar {
-    width: 22rem;
+    display: inline-block;
+    max-width: 100%;
     padding: 2rem 2.2rem;
     background-color: #FF6600;
     color: white;
@@ -168,9 +188,9 @@ button:focus {
     border-radius: 20px;
     margin-top: 10px;
 }
-.survey_cost {
+.cost_title {
     margin-top: 30px;
-    font-size: 1.7em;
+    font-size: 1.5em;
 }
 .tAndC {
     display: flex;
@@ -216,6 +236,21 @@ button:focus {
     width: 20rem;
 }
 
+.costBarTitle {
+    font-size: 0.4em;
+}
+
+.asterisk-text {
+    margin-top: 10px;
+    padding: 10px 0;
+    color: #808080;
+    font-size: 10px;
+}
+.asterisk {
+    color: #4D4D4D;
+    font-size: large;
+}
+
 @media (max-width: 768px) {
     .container {
         padding: 0 40px;
@@ -225,7 +260,7 @@ button:focus {
     }
 
     .store-name-div button {
-        width: 38%;
+        width: revert;
     }
     .cost_bar {
         width: 20rem;
@@ -241,19 +276,22 @@ button:focus {
         padding: 0 28px;
     }
     body {
-        font-size: 12px;
+        font-size: 11px;
     }
     button {
         font-size: 8px;
-        padding: 8px 17px
+        padding: 8px 10px
+    }
+    .containerHeader{ 
+    font-size: 10px;
     }
     hr {
         margin: 10px 0;
     }
     .store-name {
         margin: 1rem 0;
-        font-size: 12px;
-        padding:0.7rem;
+        font-size: 11px;
+        padding: 0.5rem;
     }
     .state_lga {
         font-size: revert;
@@ -279,14 +317,30 @@ button:focus {
         padding: 0 10px;
         font-size: revert;
     }
-    .survey_cost {
+    .cost_title {
         font-size: 14px;
         margin: 0;
     }
+    .calcDiv {
+        width: revert;
+        padding: revert;
+    }
     .cost_bar {
-        width: 12rem;
+        width: revert;
         padding: 1.1rem;
         font-size: 1.5em;
+    }
+    .cost_bar span {
+        font-size: 0.9em;
+    }
+    .calcDiv span {
+        font-size: 1.3em;
+    }
+    .stockDay {
+        font-size: 1.2em;
+    }
+    .calcDiv p {
+        font-size: 1.1em;
     }
     .tAndC span {
         font-size: 6px;
@@ -297,6 +351,9 @@ button:focus {
         width: 7rem;
     }
     .store-name-div button {
-        width: 36%;
+        width: revert;
+    }
+    .store-name-div input {
+        width: 55%;
     }
 }
