@@ -63,7 +63,7 @@ document.addEventListener('click',function(e){
             
             
             if (cost_title.children.length ==0) {
-                cost_title.insertAdjacentHTML("beforeend", `<span id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" data-timeLow ="${Math.floor(noOfDays)}" data-timeHigh="${Math.ceil(noOfDays)}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent}; </span>`)
+                cost_title.insertAdjacentHTML("beforeend", `<span class = "costSpanMargin" id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" data-timeLow ="${Math.floor(noOfDays)}" data-timeHigh="${Math.ceil(noOfDays)}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent}; </span>`)
                 // skuTimeLow.push(Math.floor(noOfDays))
                 // skuTimeHigh.push(Math.ceil(noOfDays))
             } else {
@@ -77,7 +77,7 @@ document.addEventListener('click',function(e){
                     cost_title.querySelector(`#costOF${parentDiv.children[0].id}`).dataset.timehigh = Math.ceil(noOfDays);
                     console.log("red");
                 } else if (store.id !== `costOF${parentDiv.children[0].id}` && !Array.from(cost_title.children).includes(document.querySelector(`#costOF${parentDiv.children[0].id}`))){
-                    cost_title.insertAdjacentHTML("beforeend", `<span id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" data-timeLow ="${Math.floor(noOfDays)}" data-timeHigh="${Math.ceil(noOfDays)}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
+                    cost_title.insertAdjacentHTML("beforeend", `<span class = "costSpanMargin" id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" data-timeLow ="${Math.floor(noOfDays)}" data-timeHigh="${Math.ceil(noOfDays)}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
                     console.log("blue");
                 }              
                 
@@ -103,7 +103,7 @@ document.addEventListener('click',function(e){
         let parentResultDiv = e.target.parentNode;
         parentResultDiv.children[1].textContent = nairaFormat.format(singleCost);
         if (cost_title.children.length ==0) {
-            cost_title.insertAdjacentHTML("beforeend", `<span id="costOF${parentDiv.children[0].id}" data-value="${singleCost}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
+            cost_title.insertAdjacentHTML("beforeend", `<span class = "costSpanMargin" id="costOF${parentDiv.children[0].id}" data-value="${singleCost}"> ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
         } else {
         for(const store of cost_title.children) {
             // console.dir( cost_title.children[0].dataset)
@@ -112,7 +112,7 @@ document.addEventListener('click',function(e){
                 cost_title.querySelector(`#costOF${parentDiv.children[0].id}`).dataset.value = singleCost;
                 console.log("red");
             } else if (store.id !== `costOF${parentDiv.children[0].id}` && !Array.from(cost_title.children).includes(document.querySelector(`#costOF${parentDiv.children[0].id}`))){
-                cost_title.insertAdjacentHTML("beforeend", `<span id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" > ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
+                cost_title.insertAdjacentHTML("beforeend", `<span class = "costSpanMargin" id="costOF${parentDiv.children[0].id}" data-value="${singleCost}" > ${parentDiv.children[0].value}: ${parentResultDiv.children[1].textContent};</span>`)
                 console.log("blue");
             }              
             
@@ -294,7 +294,7 @@ newStockStore.addEventListener("click", () => {
         </div>
         </div>`
     }
-    
+    newStoreName.value = "";
     storeNameHr.insertAdjacentHTML('beforebegin', newStore);
     
 })
