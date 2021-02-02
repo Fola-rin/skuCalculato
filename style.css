@@ -281,34 +281,34 @@ button:focus {
         padding: 0 28px;
     }
     body {
-        font-size: 11px;
+        font-size: 16px;
     }
     button {
-        font-size: 8px;
+        font-size: 14px;
         padding: 8px 10px
     }
     .containerHeader{ 
-    font-size: 10px;
+    font-size: 16px;
     }
     hr {
         margin: 10px 0;
     }
     .store-name {
         margin: 1rem 0;
-        font-size: 11px;
-        padding: 0.5rem;
+        font-size: 16px;
+        padding: 0.7rem;
     }
     .state_lga {
-        font-size: revert;
+        font-size: 16px;
     }
-    .state_lga p{
-        font-size: revert;
+    .state_lga p {
+        font-size: 18px;
     }
     .buttonDiv {
         padding: 17px;
     }
     .dropdown-div {
-        width: 7rem;
+        width: 8rem;
     }
     .custom-select__trigger {
         padding: 0 8px;
@@ -323,8 +323,11 @@ button:focus {
         font-size: revert;
     }
     .cost_title {
-        font-size: 14px;
+        font-size: 16px;
         margin: 0;
+    }
+    .costSpanMargin {
+        font-size: 16px;
     }
     .calcDiv {
         width: revert;
@@ -339,26 +342,64 @@ button:focus {
         font-size: 0.9em;
     }
     .calcDiv span {
-        font-size: 1.3em;
+        font-size: 16px;
     }
     .stockDay {
-        font-size: 1.2em;
+        font-size: 17px;
     }
     .calcDiv p {
-        font-size: 1.1em;
+        font-size: 16px;
+    }
+    .costBarTitle {
+        font-size: 12px;
+    }
+    .tAndC {
+        justify-content: space-between;
+        align-items: end;
     }
     .tAndC span {
-        font-size: 6px;
+        font-size: 12px;
+        width: 68%;
     }
     .sku_input {
         padding: 0 8px;
         height: 35px;
-        width: 7rem;
+        width: 8rem;
     }
     .store-name-div button {
         width: revert;
+        padding: 10px;
     }
     .store-name-div input {
-        width: 55%;
+        width: 50%;
     }
+    .asterisk-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 375px) {
+    .container{
+    padding: 0 12px;
+    }
+    .tAndC span {
+        width: 66%;
+    }
+}
+@media (max-width: 320px) {
+    .container {
+        padding: 0px 10px;
+    }
+.state_lga p {
+    font-size: 16px;
+}
+
+.store-name-div input {
+    width: 45%;
+    padding: 0.5rem;
+}
+.tAndC span {
+    width: 60%;
+}
+
 }
