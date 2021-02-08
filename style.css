@@ -1,8 +1,7 @@
-
-html{
-    margin: 0;
-    padding: 0;
-    border: 0;
+html {
+	margin: 0;
+	padding: 0;
+	border: 0;
 }
 *,
 *::before,
@@ -12,394 +11,496 @@ html{
 	box-sizing: border-box;
 }
 body {
-    margin: 0;
-    font-size: 18px;
-    line-height: 1.42857143;
-    color: #333;
-    background-color: #fff;
-    font-family: 'Roboto', sans-serif;
+	margin: 0;
+	font-size: 18px;
+	line-height: 1.42857143;
+	color: #333;
+	background-color: #fff;
+	font-family: "Roboto", sans-serif;
 }
 hr {
-    margin: 34px 0;
+	margin: 34px 0;
 }
 a {
-    color: #FF6600;
+	color: #ff6600;
 }
-h2, h3 {
-    color: #FF6600;
-    font-weight: 500;
+img {
+	box-sizing: border-box;
+}
+h2,
+h3 {
+	color: #ff6600;
+	font-weight: 500;
 }
 h3 span {
-    font-weight: 300;
+	font-weight: 300;
 }
 input:focus {
-    outline: none;
+	outline: none;
 }
 button {
-    border: none;
-    padding: 13px 50px;
-    border-radius: 30px;
-    cursor: pointer;
-    background-color: #FF6600;
-    color: white;
-    font-size: 0.9em;;
+	border: none;
+	padding: 13px 50px;
+	border-radius: 30px;
+	cursor: pointer;
+	background-color: #ff6600;
+	color: white;
+	font-size: 0.9em;
 }
 button:focus {
-    outline: none;
+	outline: none;
 }
-
-.containerHeader{
-    margin-top: 10px;
-    padding: 10px 0;
-    color: #808080;
+header {
+	margin: 25px;
 }
-
+.logo {
+	width: 115px;
+}
+.introHeader {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 90px;
+	padding-right: 50px;
+}
+.introHeader h1 {
+	color: #ff6600;
+	font-weight: 300;
+	font-size: 51px;
+	width: 76%;
+	margin-bottom: 21px;
+}
+.introHeader img {
+	width: 330px;
+	height: auto;
+}
+.introHeader div {
+	width: 39%;
+	color: #808080;
+}
+.containerHeader {
+	margin-top: 10px;
+	padding: 10px 0;
+	color: #808080;
+}
+.stock-taking-summary {
+	display: flex;
+	justify-content: space-between;
+	align-items: end;
+	margin-bottom: 40px;
+	padding-right: 50px;
+}
+.stock-taking-summary img {
+	width: 260px;
+	height: auto;
+}
+.stock-taking-summary strong {
+	display: block;
+}
+.stock-taking-summary p {
+	margin-top: 20px;
+	padding: 20px;
+}
+.stock-taking-summary div {
+	width: 49%;
+}
 .buttonDiv {
-    display: flex;
-    justify-content: flex-end;
+	display: flex;
+	justify-content: flex-end;
 }
 .calcDiv {
-    width: 20rem;
-    padding: 0 69px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+	width: 20rem;
+	padding: 0 69px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 .calcDiv span {
-    font-size: 1.7em;
-    color: #FF6600;   
+	font-size: 1.7em;
+	color: #ff6600;
 }
 .calcDiv p {
-    color: #FF6600;   
+	color: #ff6600;
 }
 .stockDay {
-    font-size: 1.2em;
+	font-size: 1.2em;
 }
 
 .container {
-    padding:0 230px;;
-    margin: auto;
+	padding: 0 230px;
+	margin: auto;
 }
 .dropdown-div {
-    position: relative;
-    user-select: none;
-    width: 20rem;
+	position: relative;
+	user-select: none;
+	width: 20rem;
 }
 .custom-arrow {
 	width: 0;
 	height: 0;
 	border: 7px solid transparent;
-    border-top-color:#808080;  
+	border-top-color: #808080;
 }
 
 .store-name {
-    margin: 2rem 0;
-    background: #f8f8f8;
-    border: 1px solid #bfbebe;
-    color: grey;
-    border-radius: 8px;
-    padding: 1rem;
-    font-size: 1em;
-    width: 100%;
+	margin: 2rem 0;
+	background: #f8f8f8;
+	border: 1px solid #bfbebe;
+	color: grey;
+	border-radius: 8px;
+	padding: 1rem;
+	font-size: 1em;
+	width: 100%;
 }
 .store-name:focus {
-    outline: none;
+	outline: none;
 }
 
 .state_lga {
 	display: flex;
 	justify-content: space-between;
-    margin-bottom: 20px;
-    align-items: center;
-    font-size: 1.2em;
+	margin-bottom: 20px;
+	align-items: center;
+	font-size: 1.2em;
 }
 .state_lga p {
-    color: #FF6600;
-    font-size: 1.2em;
+	color: #ff6600;
+	font-size: 1.2em;
 }
 .custom-select {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    border-width: 0 2px 0 2px;
-    border: none;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	border-width: 0 2px 0 2px;
+	border: none;
 }
 .custom-select__trigger {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 22px;
-    font-weight: 300;
-    color: #4D4D4D;
-    height: 60px;
-    line-height: 60px;
-    background: #f8f8f8;
-    border: 1px solid #bfbebe;
-    cursor: pointer;
-    border-radius: 10px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 22px;
+	font-weight: 300;
+	color: #4d4d4d;
+	height: 60px;
+	line-height: 60px;
+	background: #f8f8f8;
+	border: 1px solid #bfbebe;
+	cursor: pointer;
+	border-radius: 10px;
 }
 .custom-options {
-    position: absolute;
-    display: block;
-    top: 100%;
-    left: 0;
-    right: 0;
-    border: 1px solid #bfbebe;
-    border-top: 0;
-    background: #f8f8f8;
-    transition: all 0.5s;
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-    z-index: 2;
+	position: absolute;
+	display: block;
+	top: 100%;
+	left: 0;
+	right: 0;
+	border: 1px solid #bfbebe;
+	border-top: 0;
+	background: #f8f8f8;
+	transition: all 0.5s;
+	opacity: 0;
+	visibility: hidden;
+	pointer-events: none;
+	z-index: 2;
 }
 .custom-select.open .custom-options {
-    opacity: 1;
-    visibility: visible;
-    pointer-events: all;
+	opacity: 1;
+	visibility: visible;
+	pointer-events: all;
 }
 .custom-option {
-    color: #4D4D4D;
-    position: relative;
-    display: block;
-    padding: 0 22px 0 22px;
-    font-size: 22px;
-    font-weight: 300;
-    line-height: 60px;
-    cursor: pointer;
-    transition: all 0.5s;
+	color: #4d4d4d;
+	position: relative;
+	display: block;
+	padding: 0 22px 0 22px;
+	font-size: 22px;
+	font-weight: 300;
+	line-height: 60px;
+	cursor: pointer;
+	transition: all 0.5s;
 }
 .custom-option:hover {
-    cursor: pointer;
-    background-color: #d6d6d6;
+	cursor: pointer;
+	background-color: #d6d6d6;
 }
 .custom-option.selected {
-    color: #ffffff;
-    background-color: #9c9c9c;
+	color: #ffffff;
+	background-color: #9c9c9c;
 }
 .cost_bar {
-    display: inline-block;
-    max-width: 100%;
-    padding: 2rem 2.2rem;
-    background-color: #FF6600;
-    color: white;
-    font-size: 3em;
-    border-radius: 20px;
-    margin-top: 10px;
+	display: inline-block;
+	max-width: 100%;
+	padding: 2rem 2.2rem;
+	background-color: #ff6600;
+	color: white;
+	font-size: 3em;
+	border-radius: 20px;
+	margin-top: 10px;
 }
 .cost_title {
-    margin-top: 30px;
-    font-size: 1.5em;
+	margin-top: 30px;
+	font-size: 1.5em;
 }
 .tAndC {
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
 }
 .tAndC span {
-    font-size: 0.8em;
+	font-size: 0.8em;
 }
 .tAndChr {
-    background-color:#FF6600;
-    height: 1px;
-    border: none;
+	background-color: #ff6600;
+	height: 1px;
+	border: none;
 }
 .borderRadius {
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
 }
-
-
 
 .store-name-div {
 	display: flex;
 	justify-content: space-between;
-    align-items: center;
+	align-items: center;
 }
 .store-name-div input {
-    width: 60%;
+	width: 60%;
 }
 .store-name-div button {
-    background-color: #d0d0d0;
-    width: 30%;
+	background-color: #d0d0d0;
+	width: 30%;
 }
 .sku_input {
-    padding: 0 22px;
-    background: #f8f8f8;
-    border: 1px solid #bfbebe;
-    color: grey;
-    font-weight: 300;
-    border-radius: 8px;
-    padding: 1rem;
-    font-size: 1em;
-    width: 20rem;
+	padding: 0 22px;
+	background: #f8f8f8;
+	border: 1px solid #bfbebe;
+	color: grey;
+	font-weight: 300;
+	border-radius: 8px;
+	padding: 1rem;
+	font-size: 1em;
+	width: 20rem;
 }
 
 .costBarTitle {
-    font-size: 0.4em;
+	font-size: 0.4em;
 }
 
 .asterisk-text {
-    margin-top: 10px;
-    padding: 10px 0;
-    color: #808080;
-    font-size: 10px;
+	margin-top: 10px;
+	padding: 10px 0;
+	color: #808080;
+	font-size: 10px;
 }
 .asterisk {
-    color: #4D4D4D;
-    font-size: large;
+	color: #4d4d4d;
+	font-size: large;
 }
 .costSpanMargin {
-    padding-left: 6px;
-    font-size: 12px;
-    display: inline-block;
+	padding-left: 6px;
+	font-size: 12px;
+	display: inline-block;
 }
-
+@media (max-width: 1024px) {
+	.container {
+		padding: 0 40px;
+	}
+}
 @media (max-width: 768px) {
-    .container {
-        padding: 0 40px;
-    }
-    button {
-        font-size: revert;
-    }
+	.introHeader {
+		padding: unset;
+	}
+	.introHeader div {
+		width: 50%;
+	}
+	.introHeader img {
+		width: 260px;
+	}
+	.introHeader h1 {
+		width: 87%;
+	}
+	.stock-taking-summary {
+		padding: unset;
+	}
+	.container {
+		padding: 0 40px;
+	}
+	button {
+		font-size: revert;
+	}
 
-    .store-name-div button {
-        width: revert;
-    }
-    .cost_bar {
-        width: 20rem;
-        font-size: 2.5em;
-    }
-    .tAndC span {
-        font-size: 0.7em;
-    }
+	.store-name-div button {
+		width: revert;
+	}
+	.cost_bar {
+		width: 20rem;
+		font-size: 2.5em;
+	}
+	.tAndC span {
+		font-size: 0.7em;
+	}
 }
 
 @media (max-width: 425px) {
-    .container {
-        padding: 0 28px;
-    }
-    body {
-        font-size: 16px;
-    }
-    button {
-        font-size: 14px;
-        padding: 8px 10px
-    }
-    .containerHeader{ 
-    font-size: 16px;
-    }
-    hr {
-        margin: 10px 0;
-    }
-    .store-name {
-        margin: 1rem 0;
-        font-size: 16px;
-        padding: 0.7rem;
-    }
-    .state_lga {
-        font-size: 16px;
-    }
-    .state_lga p {
-        font-size: 18px;
-    }
-    .buttonDiv {
-        padding: 17px;
-    }
-    .dropdown-div {
-        width: 8rem;
-    }
-    .custom-select__trigger {
-        padding: 0 8px;
-        height: 35px;
-    }
-    .custom-arrow {
-        border: 4px solid transparent;
-        border-top-color: #808080;
-    }
-    .custom-option {
-        padding: 0 10px;
-        font-size: revert;
-    }
-    .cost_title {
-        font-size: 16px;
-        margin: 0;
-    }
-    .costSpanMargin {
-        font-size: 16px;
-    }
-    .calcDiv {
-        width: revert;
-        padding: revert;
-    }
-    .cost_bar {
-        width: revert;
-        padding: 1.1rem;
-        font-size: 1.5em;
-    }
-    .cost_bar span {
-        font-size: 0.9em;
-    }
-    .calcDiv span {
-        font-size: 16px;
-    }
-    .stockDay {
-        font-size: 17px;
-    }
-    .calcDiv p {
-        font-size: 16px;
-    }
-    .costBarTitle {
-        font-size: 12px;
-    }
-    .tAndC {
-        justify-content: space-between;
-        align-items: end;
-    }
-    .tAndC span {
-        font-size: 12px;
-        width: 68%;
-    }
-    .sku_input {
-        padding: 0 8px;
-        height: 35px;
-        width: 8rem;
-    }
-    .store-name-div button {
-        width: revert;
-        padding: 10px;
-    }
-    .store-name-div input {
-        width: 50%;
-    }
-    .asterisk-text {
-        font-size: 14px;
-    }
+	header {
+		margin: 15px;
+	}
+	.logo {
+		width: 90px;
+	}
+	.introHeader {
+		flex-direction: column-reverse;
+		margin-bottom: 50px;
+	}
+	.introHeader div {
+		width: 100%;
+	}
+	.introHeader h1 {
+		font-size: 38px;
+		margin-top: 20px;
+	}
+	.introHeader img {
+		width: 180px;
+		margin-right: 32px;
+	}
+	.stock-taking-summary {
+		flex-direction: column;
+	}
+	.stock-taking-summary img {
+		width: 190px;
+		margin: 20px auto 0;
+	}
+	.stock-taking-summary p {
+		margin-top: 13px;
+		padding: 10px;
+	}
+	.stock-taking-summary div {
+		width: 100%;
+	}
+	.container {
+		padding: 0 28px;
+	}
+	body {
+		font-size: 16px;
+	}
+	button {
+		font-size: 14px;
+		padding: 8px 10px;
+	}
+	.containerHeader {
+		font-size: 16px;
+	}
+	hr {
+		margin: 10px 0;
+	}
+	.store-name {
+		margin: 1rem 0;
+		font-size: 16px;
+		padding: 0.7rem;
+	}
+	.state_lga {
+		font-size: 16px;
+	}
+	.state_lga p {
+		font-size: 18px;
+	}
+	.buttonDiv {
+		padding: 17px;
+	}
+	.dropdown-div {
+		width: 8rem;
+	}
+	.custom-select__trigger {
+		padding: 0 8px;
+		height: 35px;
+	}
+	.custom-arrow {
+		border: 4px solid transparent;
+		border-top-color: #808080;
+	}
+	.custom-option {
+		padding: 0 10px;
+		font-size: revert;
+	}
+	.cost_title {
+		font-size: 16px;
+		margin: 0;
+	}
+	.costSpanMargin {
+		font-size: 16px;
+	}
+	.calcDiv {
+		width: revert;
+		padding: revert;
+	}
+	.cost_bar {
+		width: revert;
+		padding: 1.1rem;
+		font-size: 1.5em;
+	}
+	.cost_bar span {
+		font-size: 0.9em;
+	}
+	.calcDiv span {
+		font-size: 16px;
+	}
+	.stockDay {
+		font-size: 17px;
+	}
+	.calcDiv p {
+		font-size: 16px;
+	}
+	.costBarTitle {
+		font-size: 12px;
+	}
+	.tAndC {
+		justify-content: space-between;
+		align-items: end;
+	}
+	.tAndC span {
+		font-size: 12px;
+		width: 68%;
+	}
+	.sku_input {
+		padding: 0 8px;
+		height: 35px;
+		width: 8rem;
+	}
+	.store-name-div button {
+		width: revert;
+		padding: 10px;
+	}
+	.store-name-div input {
+		width: 50%;
+	}
+	.asterisk-text {
+		font-size: 14px;
+	}
 }
 
 @media (max-width: 375px) {
-    .container{
-    padding: 0 12px;
-    }
-    .tAndC span {
-        width: 66%;
-    }
+	.container {
+		padding: 0 12px;
+	}
+	.tAndC span {
+		width: 66%;
+	}
 }
 @media (max-width: 320px) {
-    .container {
-        padding: 0px 10px;
-    }
-.state_lga p {
-    font-size: 16px;
-}
+	.container {
+		padding: 0px 10px;
+	}
+	.state_lga p {
+		font-size: 16px;
+	}
 
-.store-name-div input {
-    width: 45%;
-    padding: 0.5rem;
-}
-.tAndC span {
-    width: 60%;
-}
-
+	.store-name-div input {
+		width: 45%;
+		padding: 0.5rem;
+	}
+	.tAndC span {
+		width: 60%;
+	}
 }

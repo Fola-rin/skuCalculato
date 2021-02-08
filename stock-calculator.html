@@ -1,159 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+	<body>
+		<header>
+			<a href="https://shopkite.com.ng/"
+				><img src="assets/shopkite-logo.png" class="logo" alt="shopkite-logo" />
+			</a>
+		</header>
+		<div class="container">
+			<div class="containerHeader">
+				<h2>Step 2: Stocktaking Calculator</h2>
+				<hr class="tAndChr" />
+				After your stock count has been taken, we can proceed to calculating the
+				Stocktaking cost. This process ensures we provide a business-friendly
+				cost to helping you get started on ShopKite Merchant. You'll be charged
+				a base price for each stock taking agent made available to you based on
+				your request using the "Stocktaking Calculator" per store, per day. Each
+				stock taker is mandated to update a minimum of 50 unique products,
+				daily.
+			</div>
+			<hr />
+			<div class="storeContainer">
+				<input
+					type="text"
+					name="store_name"
+					placeholder="Store Name"
+					class="store-name"
+					id="store_0"
+				/>
+				<div class="state_lga">
+					<p>State</p>
+					<div class="dropdown-div">
+						<div class="custom-select">
+							<div class="custom-select__trigger">
+								<span class="custom-arrow"></span>
+								<span class="show">Lagos</span>
+							</div>
+							<div id="stateDropdown" class="custom-options">
+								<span class="custom-option selected" data-value="lagos"
+									>Lagos</span
+								>
+								<span class="custom-option" data-value="ogun">Ogun</span>
+								<span class="custom-option" data-value="abuja">Abuja</span>
+								<span class="custom-option" data-value="osun">Osun</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="state_lga">
+					<p>Local Government Area</p>
+					<div class="dropdown-div">
+						<div class="custom-select">
+							<div class="custom-select__trigger">
+								<span class="custom-arrow"></span>
+								<span class="show">Oshodi/Isolo</span>
+							</div>
+							<div id="stateDropdown" class="custom-options">
+								<span
+									class="custom-option lgaOption selected"
+									data-value="Oshodi"
+									>Oshodi/Isolo</span
+								>
+								<span class="custom-option lgaOption" data-value="ikorodu"
+									>Ikorodu</span
+								>
+								<span class="custom-option lgaOption" data-value="l_island"
+									>Lagos island</span
+								>
+								<span class="custom-option lgaOption" data-value="l_mainland"
+									>Lagos mainland</span
+								>
+								<span class="custom-option lgaOption" data-value="ajah"
+									>Ajah</span
+								>
+								<span class="custom-option lgaOption" data-value="lekki"
+									>Lekki</span
+								>
+								<span class="custom-option lgaOption" data-value="festac"
+									>Festac</span
+								>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="state_lga">
+					<p>Stock volume count</p>
+					<input type="number" class="sku_input" />
+				</div>
+				<div class="state_lga">
+					<p>Stock taking agents</p>
+					<div class="dropdown-div">
+						<div class="custom-select">
+							<div class="custom-select__trigger">
+								<span class="custom-arrow"></span>
+								<span class="show">1</span>
+							</div>
+							<div class="custom-options">
+								<span class="custom-option selected sta" data-value="1"></span>
+								<span class="custom-option sta" data-value="2">2</span>
+								<span class="custom-option sta" data-value="3">3</span>
+								<span class="custom-option sta" data-value="4">4</span>
+								<span class="custom-option sta" data-value="5">5</span>
+								<span class="custom-option sta" data-value="6">6</span>
+								<span class="custom-option sta" data-value="7">7</span>
+								<span class="custom-option sta" data-value="8">8</span>
+								<span class="custom-option sta" data-value="9">9</span>
+								<span class="custom-option sta" data-value="10">10</span>
+								<span class="custom-option sta" data-value="11">11</span>
+								<span class="custom-option sta" data-value="12">12</span>
+								<span class="custom-option sta" data-value="13">13</span>
+								<span class="custom-option sta" data-value="14">14</span>
+								<span class="custom-option sta" data-value="15">15</span>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="buttonDiv">
+					<div class="calcDiv">
+						<button class="stockCalc">Calculate</button>
+						<span class="stockCost">...</span>
+						<p>
+							<b class="stockDay" id="stockDayLow">...</b> to
+							<b class="stockDay" id="stockDayHigh">...</b><em> Days**</em>
+						</p>
+					</div>
+				</div>
+			</div>
+			<hr class="target_hr" />
+			<div class="store-name-div">
+				<input
+					type="text"
+					name="store_name"
+					placeholder="Store Name"
+					class="store-name newStoreName"
+				/>
+				<button class="newStockStore">Add an additional store</button>
+			</div>
+			<hr />
+			<h3 class="cost_title">Cost and Timeline:</h3>
 
-<body>
-    <div class="container">
-        <div class="containerHeader">
-            <h2>Step 2: Stocktaking Calculator</h2>
-            <hr class="tAndChr">
-            We have a simple and cost-friendly pricing model, and
-            the best way to know where your store(s) fits in the
-            pricing model is to first count the total number of
-            unique products (SKUs) in your store. It's the first
-            step to ensuring your business starts right on the
-            ShopKite Merchant platform.
-            
-            You can request for a survey to be made on your store by reaching us on our support line and we'll have one of our
-            representatives sent to you. Please fill the form below this section to get a Survey cost.
-            SKU count:
-            An SKU count refers to the number of unique
-            products you have in your store and not the
-            volume. See the diagram for further clarity:
-            
-            Also counts as a single SKU
-            SKU
-            
-            After your stock count has been taken, we can proceed to calculating the Stocktaking cost. This
-            process ensures we provide a business-friendly cost to helping you get started on ShopKite
-            Merchant. You'll be charged a base price for each stock taking agent made available to you based
-            on your request using the "Stocktaking Calculator" per store, per day. Each stock taker is mandated
-            to update a minimum of 50 unique products, daily.
-        </div>
-        <div class="storeContainer">
-            <input type="text" name="store_name" placeholder="Store Name" class="store-name" id="store_0">
-            <div class="state_lga">
-                <p>State</p>
-                <div class="dropdown-div">
-                    <div class="custom-select">
-                        <div class="custom-select__trigger">
-                            <span class="custom-arrow"></span>
-                            <span class="show">Lagos</span>
-                        </div>
-                        <div id="stateDropdown" class="custom-options">
-                            <span class="custom-option selected" data-value="lagos">Lagos</span>
-                            <span class="custom-option" data-value="ogun">Ogun</span>
-                            <span class="custom-option" data-value="abuja">Abuja</span>
-                            <span class="custom-option" data-value="osun">Osun</span>
-                        </div>  
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="state_lga">
-                <p>Local Government Area</p>
-                <div class="dropdown-div">
-                    <div class="custom-select">
-                        <div class="custom-select__trigger">
-                            <span class="custom-arrow"></span>
-                            <span class="show">Oshodi/Isolo</span>
-                        </div>
-                        <div id="stateDropdown" class="custom-options">
-                            <span class="custom-option lgaOption selected" data-value="Oshodi">Oshodi/Isolo</span>
-                            <span class="custom-option lgaOption" data-value="ikorodu">Ikorodu</span>
-                            <span class="custom-option lgaOption" data-value="l_island">Lagos island</span>
-                            <span class="custom-option lgaOption" data-value="l_mainland">Lagos mainland</span>
-                            <span class="custom-option lgaOption" data-value="ajah">Ajah</span>
-                            <span class="custom-option lgaOption" data-value="lekki">Lekki</span>
-                            <span class="custom-option lgaOption" data-value="festac">Festac</span>
-                        </div>  
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="state_lga">
-                <p>Stock volume count</p>
-                <input type="number" class="sku_input">
-            </div>
-            <div class="state_lga">
-                <p>Stock taking agents</p>
-                <div class="dropdown-div">
-                    <div class="custom-select">
-                        <div class="custom-select__trigger">
-                            <span class="custom-arrow"></span>
-                            <span class="show">1</span>
-                        </div>
-                        <div class="custom-options">
-                            <span class="custom-option selected sta" data-value="1"></span>
-                            <span class="custom-option sta" data-value="2">2</span>
-                            <span class="custom-option sta" data-value="3">3</span>
-                            <span class="custom-option sta" data-value="4">4</span>
-                            <span class="custom-option sta" data-value="5">5</span>
-                            <span class="custom-option sta" data-value="6">6</span>
-                            <span class="custom-option sta" data-value="7">7</span>
-                            <span class="custom-option sta" data-value="8">8</span>
-                            <span class="custom-option sta" data-value="9">9</span>
-                            <span class="custom-option sta" data-value="10">10</span>
-                            <span class="custom-option sta" data-value="11">11</span>
-                            <span class="custom-option sta" data-value="12">12</span>
-                            <span class="custom-option sta" data-value="13">13</span>
-                            <span class="custom-option sta" data-value="14">14</span>
-                            <span class="custom-option sta" data-value="15">15</span>
-                        </div>  
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="buttonDiv">
-                <div class="calcDiv">
-                    <button class="stockCalc">Calculate</button>
-                    <span class="stockCost">...</span>
-                    <p> <b class="stockDay" id="stockDayLow">...</b> to <b class="stockDay" id="stockDayHigh">...</b><em> Days**</em></p>
-                </div>
-            </div>
-        </div>
-        <hr class="target_hr">
-        <div class="store-name-div">
-        <input type="text" name="store_name" placeholder="Store Name" class="store-name newStoreName">
-        <button class="newStockStore">Add an additional store</button>
-        </div>
-        <hr>
-        <h3 class="cost_title">Cost and Timeline: </h3>
-        
-        <div class="cost_bar" id="costBar">
-            <p class="costBarTitle">Total Cost and Timeline:</p>
-            <span id="skuCost"></span>
-            <span> | </span>
-            <span class="skuTimeline"><b>...</b> to <b>...</b><i> Days **</i></span>
-        </div>
+			<div class="cost_bar" id="costBar">
+				<p class="costBarTitle">Total Cost and Timeline:</p>
+				<span id="skuCost"></span>
+				<span> | </span>
+				<span class="skuTimeline"><b>...</b> to <b>...</b><i> Days **</i></span>
+			</div>
 
-        <hr class="tAndChr">
-        <div class="tAndC"> 
-            <span><input type="checkbox">  Accept our terms on stock-taking. Read more about our stock-taking policy <a href="#"> <i>here</i></a></span>
-            <button>Make Payment</button>
-        </div>
-        <div class="asterisk-text">
-            <span class="asterisk">*</span>
-            <br>
-            Cost for stock-taking is dependent on store location, the total number of SKU's and stock-taking Agents stated. Please note the total cost may change if any of the above mentioned variables were to change under the circumstance.
-        </div>
-        <div class="asterisk-text">
-            <span class="asterisk">**</span>
-            <br>
-            Timeline estimated for stock-taking is dependent on store location and doesn't factor holidays or other times when store may be closed, the total number of SKU's and stock-taking Agents stated. Please note that the timeline stated may change if any of the above mentioned variables were to change under the circumstance. If in any for example additional SKU's are added to the store after a cost has been calculated hereby causing the nu
-        </div>
-    </div>
+			<hr class="tAndChr" />
+			<div class="tAndC">
+				<span
+					><input type="checkbox" /> Accept our terms on stock-taking. Read more
+					about our stock-taking policy <a href="#"> <i>here</i></a></span
+				>
+				<button>Make Payment</button>
+			</div>
+			<div class="asterisk-text">
+				<span class="asterisk">*</span>
+				<br />
+				Cost for stock-taking is dependent on store location, the total number
+				of SKU's and stock-taking Agents stated. Please note the total cost may
+				change if any of the above mentioned variables were to change under the
+				circumstance.
+			</div>
+			<div class="asterisk-text">
+				<span class="asterisk">**</span>
+				<br />
+				Timeline estimated for stock-taking is dependent on store location and
+				doesn't factor holidays or other times when store may be closed, the
+				total number of SKU's and stock-taking Agents stated. Please note that
+				the timeline stated may change if any of the above mentioned variables
+				were to change under the circumstance. If in any for example additional
+				SKU's are added to the store after a cost has been calculated hereby
+				causing the nu
+			</div>
+		</div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script type="text/javascript" src="main.js"></script>
-</body>
-
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+		<script type="text/javascript" src="main.js"></script>
+	</body>
 </html>
